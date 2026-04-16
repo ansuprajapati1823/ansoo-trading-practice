@@ -1,0 +1,29 @@
+{
+  "overview": "ANSOO Trading Practice is a high-fidelity paper trading app where users practice buying and selling stocks and crypto with a virtual 1 Billion INR balance. Features real-time TradingView charts, a watchlist sidebar, market buy/sell trading panel, and a full portfolio P&L tracker — all in a dark, professional TradingView-inspired interface.",
+  "features": [
+    "Virtual 1 Billion INR starting balance",
+    "TradingView Advanced Real-Time Charting Widget",
+    "Watchlist sidebar with live price updates",
+    "Market Buy/Sell trading panel with balance validation",
+    "Portfolio section with P&L tracker",
+    "Trade history log",
+    "Dark TradingView-style UI",
+    "Fully responsive mobile layout",
+    "Internet Identity login",
+    "Live price data via HTTP outcalls"
+  ],
+  "category": "productivity",
+  "tags": [
+    "trading",
+    "paper-trading",
+    "stocks",
+    "crypto",
+    "portfolio",
+    "tradingview",
+    "finance",
+    "simulation",
+    "dark-theme",
+    "inr"
+  ],
+  "last_updated": "2026-04-16T06:56:17.257Z"
+}

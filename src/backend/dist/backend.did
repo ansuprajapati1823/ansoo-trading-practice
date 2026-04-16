@@ -1,0 +1,45 @@
+type TradeView = 
+ record {
+   direction: Direction;
+   id: nat;
+   price: nat;
+   quantity: nat;
+   symbol: Symbol;
+   timestamp: Timestamp;
+ };
+type TradeResult = 
+ variant {
+   err: text;
+   ok: TradeView;
+ };
+type Timestamp = int;
+type Symbol = text;
+type PortfolioSummary = 
+ record {
+   balance: nat;
+   returnPct: int;
+   totalInvested: nat;
+   totalPnl: int;
+ };
+type HoldingView = 
+ record {
+   avgPrice: nat;
+   quantity: nat;
+   symbol: Symbol;
+ };
+type Direction = 
+ variant {
+   buy;
+   sell;
+ };
+service : {
+  addToWatchlist: (symbol: Symbol) -> ();
+  buy: (symbol: Symbol, quantity: nat, pricePaise: nat) -> (TradeResult);
+  getHoldings: () -> (vec HoldingView) query;
+  getPortfolioSummary: () -> (PortfolioSummary) query;
+  getTradeHistory: () -> (vec TradeView) query;
+  getWatchlist: () -> (vec Symbol) query;
+  register: () -> ();
+  removeFromWatchlist: (symbol: Symbol) -> ();
+  sell: (symbol: Symbol, quantity: nat, pricePaise: nat) -> (TradeResult);
+}
